@@ -62,9 +62,11 @@ table tr td{
     background-color: rgb(204, 210, 216);
     padding: 8px;
 }
-.main div{
+.up{
+    height: 10px;
+}
+.main > div{
     margin: 50px 5px;
-    
 }
 
 
