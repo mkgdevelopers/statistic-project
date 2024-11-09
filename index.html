@@ -8,9 +8,15 @@
     <title>Welcome to Statistics Hub</title>
 </head>
 <body>
+
+
+
     <header>
         <div class="logo">Stats Hub</div>
-        <div class="nav">
+
+        
+
+        <nav id="nav" class="hideOnMobile">
             <ul>
                 <li>Home</li>
                 <li>Notes</li>
@@ -19,18 +25,36 @@
                 <li>Forum</li>
                 <li>Profile</li>
             </ul>
-        </div>
+        </nav>
+
         <div class="login"><button id="login">Login</button></div>
+
+
+        <img class="hideOnDesktop" src="images/open.svg" onclick="showSidebar()" alt="">
+        <nav  id="mnav">
+            <ul>
+                <img src="images/close.svg" onclick="hideSidebar()" alt="">
+                <li>Home</li>
+                <li>Notes</li>
+                <li>Feed</li>
+                <li>Calc</li>
+                <li>Forum</li>
+                <li>Profile</li>
+            </ul>
+        </nav>
     </header>
     
+
+
 
     <div class="page1">
         <div class="textArea">
             <h1>Welcome to the World of Positive Probabilities</h1>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ad magnam illum ullam molestias, odit suscipit.</p>
+            <p>A place whrere you can learn, exlpore,help other, and tests your stats all at one place</p>
             <button>Join Now</button>
         </div>
-        <div class="imgArea"><img src="images/demo-hero-img.jpg" width="400px"  alt=""></div>
+        <div class="nothing"></div>
+        <div class="imgArea hideOnMobile"><img src="images/demo-hero-img.jpg" width="400px"  alt=""></div>
     </div>
 
     <div class="pbar">
@@ -43,23 +67,31 @@
         <div class="percentages"><h1>100+</h1><h3>Past Papers</h3></div>
     </div>
 
+
+
+
     <div class="page2">
         <div class="content">
-        <h1><u> Here We Will Add Our Features</u></h1>
-        <div class="btnArea">
-            <div class="features"><b> Calculator </b><p>A special Calculator to help you solve any statistical problem step-by-step.</p></div>
-            <div class="features"><b> Notes </b><p>Best Hand-Written and pdf notes from all over the web</p></div>
-            <div class="features"><b> Tests </b><p>Top chapter wise tests to test your stats</p></div>
-            <div class="features"><b> Past Papers </b><p>All Past Papers</p></div>
-            <div class="features"><b> User Profile </b><p>Your own profile to upload and save notes</p></div>
+            <h1><u>&nbsp;&nbsp;Our Features&nbsp;&nbsp;</u></h1>
+            <div class="btnArea">
+                <div class="features"><b> Calculator </b><p>A special Calculator to help you solve any statistical problem step-by-step.</p></div>
+                <div class="features"><b> Notes </b><p>Best Hand-Written and pdf notes from all over the web</p></div>
+                <div class="features"><b> Tests </b><p>Top chapter wise tests to test your stats</p></div>
+                <div class="features"><b> Past Papers </b><p>All Past Papers</p></div>
+                <div class="features"><b> User Profile </b><p>Your own profile to upload and save notes</p></div>
+            </div>
         </div>
-        </div>
-        <div class="imgArea"><img src="images/demo-hero-img.jpg" alt="" width="400px"></div>
+        <div class="imgArea hideOnMobile"><img src="images/demo-hero-img.jpg" alt="" width="400px"></div>
     </div>
+
+
+
 
     <div class="ribbon">
         <h1>Our Great Team</h1>
     </div>
+
+
 
     <div class="page3">
         <div class="container">
@@ -115,5 +147,25 @@
     </div>
 
 
+
+
+
+    <div class="footer">
+        <h1>Footer is under construction</h1>
+    </div>
+
+
+
+
+    <script>
+        function showSidebar(){
+            const sidebar = document.querySelector('#mnav')
+            sidebar.style.display='flex'
+}
+    function hideSidebar(){
+        const sidebar = document.querySelector('#mnav')
+        sidebar.style.display='none'
+}
+    </script>
 </body>
 </html>

@@ -26,27 +26,30 @@ header{
     background-color: black;
     color: white;
     border-radius: 30px;
+    transition: 0.5s all;
+    z-index: 1;
 }
+
+#login:hover{
+    box-shadow: 0 0 700px 500px yellow;
+    background-color: transparent;
+    color: black;
+    cursor: pointer;
+}
+
 
 header .logo{
     font-size: larger;
     font-weight: bold;
 }
-.nav ul{
+#nav ul{
     display: flex;
     list-style: none;
 }
-.nav ul li{
+#nav ul li{
     padding: 2px 30px;
     border-radius: 20px;
 }
-
-header div{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
 
 .page1{
     font-family: Playwrite;
@@ -54,16 +57,16 @@ header div{
     display: flex;
     align-items: center;
     justify-content: space-between;
+    flex-wrap: wrap;
+
 }
 .page1 .textArea{
     width: 500px;
+    margin-left: 50px;
 }
 .page1 .imgArea{
     width: auto;
-}
-
-.page1 > div{
-    padding: 50px;
+    z-index: -1;
 }
 
 .page1 > .textArea > h1{
@@ -83,7 +86,7 @@ header div{
 }
 
 
-.nav ul li:hover{
+#nav ul li:hover{
     box-shadow: 0 0 10px 1px rgba(19, 19, 19, 0.596);
     transition: 0.2s ease;
     cursor: pointer;
@@ -96,6 +99,7 @@ header div{
     display: flex;
     align-items: center;
     justify-content: space-around;
+    flex-wrap: wrap;
     font-family:'Courier New', Courier, monospace;
 }
 
@@ -115,8 +119,8 @@ header div{
 }
 
 .page2 > .content > .btnArea > .features{
-    width: 280px;
-    height: 130px;
+    width: 35%;
+    height: auto;
     margin: 5px;
     border-radius: 20px;
     border: 1px solid black;
@@ -142,13 +146,10 @@ header div{
 }
 
 .page3{
-
     margin: 30px;
     font-family: Playwrite;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
 }
+
 
 .card{
     width: 300px;
@@ -188,7 +189,7 @@ header div{
 .container{
     width: 100%;
     display: flex;
-    /* flex-direction: row; */
+    flex-wrap: wrap;
     align-items: center;
     justify-content: space-around;
 }
@@ -201,4 +202,54 @@ header div{
     justify-content: center;
     align-items: center;
     font-family:Arial, Helvetica, sans-serif ;
+}
+
+
+.footer{
+    height: 70%;
+    background-color: black;
+    color: white;
+    text-align: center;
+}
+
+
+.card > .text > p{
+    background-color: grey;
+    display: inline;
+    color: white;
+    padding: 2px 4px;
+    border-radius: 2px;
+}
+
+
+#mnav{
+    position: relative;
+    background: rgba(70, 69, 69, 0.1);
+    height: 60vh;
+    width: 40vw;
+    padding: 20px;
+    color: black;
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    z-index: 999;
+    position: absolute;
+    right: 0;
+    top: 0;
+    display: none;
+}
+#mnav > ul > li{
+    list-style: none;
+}
+
+
+@media (max-width:800px){
+    .hideOnMobile{
+        display: none;
+    }
+}
+
+@media (min-width:800px){
+    .hideOnDesktop{
+        display: none;
+    }
 }
